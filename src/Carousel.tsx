@@ -181,7 +181,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         this.gotoPage(Math.floor(this.currentIndex) + 1);
     }
 
-    private gotoPage(index: number, animated: boolean = true, cb = () => { }) {
+    public gotoPage(index: number, animated: boolean = true, cb = () => { }) {
         const childrenNum = this.getChildrenNum();
         if (childrenNum <= 1) {
             return cb();
